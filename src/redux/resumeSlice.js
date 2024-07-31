@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import {BASE_URI} from './constants';
 
 const initialState = {
     personalDetailState: {
@@ -41,7 +42,7 @@ const initialState = {
 export const savePersonalDetailState = createAsyncThunk(
     'create-resume/personal-details',
     async ({ username, personalDetailState }) => {
-        const response = await axios.patch('http://localhost:8080/create-resume/personal-details', { username, personalDetailState });
+        const response = await axios.patch(`${BASE_URI}/create-resume/personal-details`, { username, personalDetailState });
         return response.data;
     }
 );
@@ -49,7 +50,7 @@ export const savePersonalDetailState = createAsyncThunk(
 export const saveEducationDetailState = createAsyncThunk(
     'create-resume/education-details',
     async ({ username, educationDetailState }) => {
-        const response = await axios.patch('http://localhost:8080/create-resume/education-details', { username, educationDetailState });
+        const response = await axios.patch(`${BASE_URI}/create-resume/education-details`, { username, educationDetailState });
         return response.data;
     }
 );
@@ -57,7 +58,7 @@ export const saveEducationDetailState = createAsyncThunk(
 export const saveExperienceDetailState = createAsyncThunk(
     'create-resume/experience-details',
     async ({ username, experienceDetailState }) => {
-        const response = await axios.patch('http://localhost:8080/create-resume/experience-details', { username, experienceDetailState });
+        const response = await axios.patch(`${BASE_URI}/create-resume/experience-details`, { username, experienceDetailState });
         return response.data;
     }
 );
@@ -65,7 +66,7 @@ export const saveExperienceDetailState = createAsyncThunk(
 export const saveProjectsState = createAsyncThunk(
     'create-resume/projects',
     async ({ username, projectsState }) => {
-        const response = await axios.patch('http://localhost:8080/create-resume/projects', { username, projectsState });
+        const response = await axios.patch(`${BASE_URI}/create-resume/projects`, { username, projectsState });
         return response.data;
     }
 );
@@ -73,7 +74,7 @@ export const saveProjectsState = createAsyncThunk(
 export const saveSkillsState = createAsyncThunk(
     'create-resume/skills',
     async ({ username, skillsState }) => {
-        const response = await axios.patch('http://localhost:8080/create-resume/skills', { username, skillsState });
+        const response = await axios.patch(`${BASE_URI}/create-resume/skills`, { username, skillsState });
         return response.data;
     }
 );

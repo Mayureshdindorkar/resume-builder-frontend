@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { setUserData } from './resumeSlice';
+import {BASE_URI} from './constants';
 
 const initialState = {
   username: null,
@@ -11,16 +12,16 @@ const initialState = {
 };
 
 export const signup = createAsyncThunk('auth/signup', async ({ username, password }) => {
-  const response = await axios.post('http://localhost:8080/auth/signup', { username, password });
+  const response = await axios.post(`${BASE_URI}/auth/signup`, { username, password });
   return response.data;
 });
 
 export const login = createAsyncThunk('auth/login', async ({ username, password }, { dispatch }) => {
   try {
-    const response = await axios.post('http://localhost:8080/auth/login', { username, password });
+    const response = await axios.post(`${BASE_URI}/auth/login`, { username, password });
     
     if (response.data.token) {
-      const userResponse = await axios.get(`http://localhost:8080/getUser/${username}`, {
+      const userResponse = await axios.get(`${BASE_URI}/getUser/${username}`, {
         headers: {
           Authorization: `Bearer ${response.data.token}`,
         },
