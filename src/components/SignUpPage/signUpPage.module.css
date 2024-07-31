@@ -47,3 +47,11 @@ button:hover {
     align-items: center;
     height: 6vh;
 }
+
+.customToast {
+    width: 500px;
+    padding: 2px;
+}
+
+
+

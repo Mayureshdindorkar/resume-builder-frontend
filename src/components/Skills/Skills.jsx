@@ -5,6 +5,8 @@ import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 import styles from './skills.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateSkillsState, saveSkillsState } from '../../redux/resumeSlice';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Skills = () => {
 
@@ -36,6 +38,10 @@ const Skills = () => {
 
   const handleSaveDraft = (e) => {
     e.preventDefault();
+    toast.success('Data saved successfully!', {
+      className: styles.customToast,
+      autoClose: 2000,
+    });
     dispatch(saveSkillsState({username, skillsState: skillList}));
   };
 
@@ -76,6 +82,7 @@ const Skills = () => {
         <button type="button" className={styles.saveDraftButton} onClick={handleSaveDraft}>Save</button>
         <button type="button" onClick={handleNext}>Print</button>
       </div>
+      <ToastContainer position="bottom-right" />
     </div>
   );
 };

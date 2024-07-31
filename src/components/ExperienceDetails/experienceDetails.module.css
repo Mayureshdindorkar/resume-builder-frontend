@@ -150,3 +150,9 @@
 .addButton:hover {
     background-color: #e0e0e0;
 }
+
+.customToast {
+    width: 500px;
+    padding: 2px;
+}
+

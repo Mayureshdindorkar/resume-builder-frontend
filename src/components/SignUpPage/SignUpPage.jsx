@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { signup } from '../../redux/authSlice';
 import { Link } from 'react-router-dom';
 import styles from './signUpPage.module.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignupPage = () => {
   const [username, setUsername] = useState('');
@@ -14,6 +16,10 @@ const SignupPage = () => {
 
   useEffect(() => {
     if (isUserSignedUp === true) {
+      toast.success('SignUp successful!', {
+        className: styles.customToast,
+        autoClose: 2000,
+      });
       navigate('/');
     }
   }, [isUserSignedUp, navigate]);
@@ -52,6 +58,7 @@ const SignupPage = () => {
         </div>
 
       </form>
+      <ToastContainer position="bottom-right" />
     </div>
   );
 };

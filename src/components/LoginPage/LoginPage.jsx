@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../../redux/authSlice';
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import styles from './loginPage.module.css';
 
 const LoginPage = () => {
@@ -12,11 +14,20 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const isUserLoggedIn = useSelector((state) => state.authReducer.isUserLoggedIn);
   const isUserOldDataLoaded = useSelector((state) => state.resumeReducer.isUserOldDataLoaded);
-  let error = useSelector((state) => state.authReducer.error);
+  const error = useSelector((state) => state.authReducer.error);
 
   useEffect(() => {
+    console.log('isUserLoggedIn:', isUserLoggedIn);
+    console.log('isUserOldDataLoaded:', isUserOldDataLoaded);
+
     if (isUserLoggedIn && isUserOldDataLoaded) {
-      navigate('/create-resume/personal-details');
+      toast.success('Login successful!', {
+        className: styles.customToast,
+        autoClose: 2000,
+      });
+      setTimeout(() => {
+        navigate('/create-resume/personal-details');
+      }, 1500); // Delay navigation by 1.5 seconds to show the toast
     }
   }, [isUserLoggedIn, isUserOldDataLoaded, navigate]);
 
@@ -53,10 +64,10 @@ const LoginPage = () => {
         <div className={styles.centerLink}>
           <Link to="/signup">SignUp</Link>
         </div>
-        
       </form>
+      <ToastContainer position="bottom-right" />
     </div>
-  );
+  )
 };
 
 export default LoginPage;

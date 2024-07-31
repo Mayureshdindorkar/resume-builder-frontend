@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { savePersonalDetailState, updatePersonalDetailState } from '../../redux/resumeSlice';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const PersonalDetails = () => {
     const navigate = useNavigate();
@@ -18,6 +20,10 @@ const PersonalDetails = () => {
 
     const handleSaveDraft = (e) => {
         e.preventDefault();
+        toast.success('Data saved successfully!', {
+            className: styles.customToast,
+            autoClose: 2000,
+        });
         dispatch(savePersonalDetailState({username, personalDetailState}));
     };
 
@@ -65,6 +71,7 @@ const PersonalDetails = () => {
                     <button type="button" className={styles.nextButton} onClick={handleNext}>Next</button>
                 </div>
             </form>
+            <ToastContainer position="bottom-right" />
         </div>
     );
 };

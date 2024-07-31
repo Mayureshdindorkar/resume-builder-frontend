@@ -80,3 +80,10 @@
 .buttonGroup .saveDraftButton:hover {
     background-color: #6b8e23; /* Darker green */
 }
+
+.customToast {
+    width: 500px;
+    padding: 2px;
+}
+
+
