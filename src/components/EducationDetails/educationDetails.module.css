@@ -1,0 +1,135 @@
+.formContainer {
+    width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formContainer h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.educationCard {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.educationCard:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.formRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+.formColumn {
+    width: 48%;
+    margin-bottom: 10px;
+}
+
+.formColumn label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formColumn input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.deleteButton {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ff0000;
+    padding: 1px;
+    margin-top: 0px;
+}
+
+.deleteButton:hover {
+    background-color: rgb(243, 186, 186);
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.buttonGroup button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30%;
+    text-align: center;
+}
+
+.buttonGroup button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.buttonGroup button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.buttonGroup .previousButton {
+    background-color: #007bff;
+    color: white;
+}
+
+.buttonGroup .nextButton {
+    background-color: #007bff;
+    color: white;
+}
+
+.buttonGroup .nextButton:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.buttonGroup .saveDraftButton {
+    background-color: #90ee90; /* Light green */
+    color: white;
+}
+
+.buttonGroup .saveDraftButton:hover {
+    background-color: #6b8e23; /* Darker green */
+}
+
+.addButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.plusIcon {
+    margin-right: 8px;
+    color: #007bff;
+}
+
+.addButton:hover {
+    background-color: #e0e0e0;
+}

@@ -1,0 +1,82 @@
+.formContainer {
+    width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formContainer h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.formGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.formColumn {
+    width: 48%;
+}
+
+.formColumn label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formColumn input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.buttonGroup button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30%;
+    text-align: center;
+}
+
+.buttonGroup button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.buttonGroup button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.buttonGroup .previousButton {
+    background-color: #007bff;
+    color: white;
+}
+
+.buttonGroup .nextButton {
+    background-color: #007bff;
+    color: white;
+}
+
+.buttonGroup .nextButton:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.buttonGroup .saveDraftButton {
+    background-color: #90ee90; /* Light green */
+    color: white;
+}
+
+.buttonGroup .saveDraftButton:hover {
+    background-color: #6b8e23; /* Darker green */
+}

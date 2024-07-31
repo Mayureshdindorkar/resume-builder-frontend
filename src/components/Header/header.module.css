@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: #002D62;
+    color: white;
+    position: relative;
+    min-height: 60px;
+}
+
+.title {
+    position: absolute;
+    left: 50%;
+    font-size: large;
+    font-weight: bold;
+    transform: translateX(-50%);
+}
+
+.welcomeMessage {
+    margin-left: auto;
+    font-size: 16px;
+}
+
+.userSection {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}

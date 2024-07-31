@@ -1,0 +1,63 @@
+.printContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.printButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.printButton:hover {
+    background-color: #45a049;
+}
+
+.previewButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.previewButton:hover {
+    background-color: #0b7dda;
+}
+
+.previewContainer {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px; /* Adjust as needed */
+}
+
+.buttonRow {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+    width: 400px;
+}
+
+.previousButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.previousButton:hover {
+    background-color: #0056b3;
+}
