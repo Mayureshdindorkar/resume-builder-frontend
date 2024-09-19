@@ -5,7 +5,7 @@ Live website: [website](https://resume-builder-frontend.azurewebsites.net/)
 ---
 
 **Demo Video:**  
-[![Watch the video](images/thumbnail.png)](https://drive.google.com/file/d/1xr8xXrYRdQclBKHLiTvzNt0Isb3KMREA/preview)
+[![Watch the video](images/new-thumbnail.png)](https://drive.google.com/file/d/1xr8xXrYRdQclBKHLiTvzNt0Isb3KMREA/preview)
 
 ---
 
